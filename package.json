@@ -90,7 +90,6 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged",
       "post-merge": "npm install",
       "pre-push": "npm run lint && npm run test"
@@ -100,11 +99,6 @@
     "**/*.js": [
       "npm run format",
       "git add"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
     ]
   },
   "standard": {
